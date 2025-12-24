@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block title %}Exchange Moment{% endblock %}
+{% block content %}
+<body data-page="exchange">
+
+<section class="exchange-section">
+
+    <h2>Give Your Moment</h2>
+    <p>Select a time, describe your moment, and we’ll send you someone else’s.</p>
+
+    <div class="exchange-box">
+
+        <!-- Time Wheel -->
+        <div class="time-box">
+            <h3>Select Time</h3>
+
+            <div id="time-wheel">
+                <div id="time-knob"></div>
+                <div id="time-display">
+                    <span id="time-display-text">00:00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Memory Form -->
+        <div class="form-box">
+            <h3>Your Moment</h3>
+
+            <form method="POST" action="{{ url_for('exchange') }}" id="exchange-form">
+
+                <input type="hidden" name="time_value" id="time_value">
+
+                <label>Mood</label>
+                <select name="mood">
+                    <option value="">Select mood</option>
+                    <option value="calm">Calm</option>
+                    <option value="happy">Happy</option>
+                    <option value="lonely">Lonely</option>
+                    <option value="chaotic">Chaotic</option>
+                    <option value="nostalgic">Nostalgic</option>
+                    <option value="hopeful">Hopeful</option>
+                </select>
+
+                <label>Your memory</label>
+                <textarea name="text" rows="5"
+                    placeholder="05:30 AM · Rooftop · Cold wind · Orange sky · Tea in hand."
+                    required></textarea>
+
+                <button type="submit" class="btn full">Exchange</button>
+            </form>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

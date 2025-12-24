@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block title %}Gallery{% endblock %}
+{% block content %}
+<body data-page="gallery">
+
+<section class="gallery-section">
+    <h2>Time Gallery</h2>
+    <p>Moments shared by strangers.</p>
+
+    <div id="gallery-grid" class="gallery-grid">
+        <!-- JS will load cards -->
+    </div>
+
+    <div class="center">
+        <button id="gallery-load-more-btn" class="btn">Load More</button>
+    </div>
+</section>
+
+{% endblock %}

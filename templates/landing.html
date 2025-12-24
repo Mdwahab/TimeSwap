@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}TimeSwap - The Living Time Museum{% endblock %}
+{% block content %}
+
+<body data-page="landing">
+<section class="landing-section">
+
+    <div class="landing-text">
+        <h1>Trade a Moment of Your Time</h1>
+        <p>
+            Share a piece of your life and receive a stranger’s moment in return.
+            No identity, no likes, no followers — just human memories.
+        </p>
+
+        <a href="{{ url_for('exchange') }}" class="btn">
+            Enter the Museum
+        </a>
+    </div>
+
+</section>
+
+{% endblock %}

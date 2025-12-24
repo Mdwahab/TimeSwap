@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block title %}Your Moment{% endblock %}
+{% block content %}
+<body data-page="result">
+
+<section class="result-section">
+
+    <h2>Your Received Moment</h2>
+    <p>Someone else experienced this.</p>
+
+    <div class="moment-card">
+
+        <div class="moment-header">
+            <span class="moment-time">{{ received_moment.time_value }}</span>
+            <span class="moment-mood">
+                {% if received_moment.mood %}
+                    {{ received_moment.mood | capitalize }}
+                {% else %}
+                    Unknown
+                {% endif %}
+            </span>
+        </div>
+
+        <div class="moment-text">
+            {{ received_moment.text }}
+        </div>
+
+        <div class="moment-buttons">
+            <a href="{{ url_for('exchange') }}" class="btn">Swap Again</a>
+            <a href="{{ url_for('gallery') }}" class="btn-outline">Explore Gallery</a>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

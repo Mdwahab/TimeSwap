@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block title %}Stats{% endblock %}
+{% block content %}
+<body data-page="stats">
+<section class="stats-section">
+    <h2>Time Patterns</h2>
+    <p>See how people share their time</p>
+
+    <div class="heatmap">
+        <div id="heatmap-grid">
+            <!-- JS fills heatmap -->
+        </div>
+    </div>
+
+    <div class="stats-box">
+        <div>
+            <span>Moments You Shared</span>
+            <strong id="stat-user-moments">0</strong>
+        </div>
+        <div>
+            <span>Moments Received</span>
+            <strong id="stat-user-received">0</strong>
+        </div>
+        <div>
+            <span>Total Moments</span>
+            <strong id="stat-total-moments">0</strong>
+        </div>
+        <div>
+            <span>Active Streak</span>
+            <strong id="stat-streak">0</strong>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
