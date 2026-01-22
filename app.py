@@ -12,9 +12,7 @@ app.config["SECRET_KEY"] = "change-this-secret-key"
 app.config["DATABASE"] = os.path.join(app.root_path, "database.db")
 
 
-# ==========================
 # LOGIN REQUIRED DECORATOR
-# ==========================
 def login_required(f):
     @wraps(f)
     def wrapper(*args, **kwargs):
@@ -24,9 +22,7 @@ def login_required(f):
     return wrapper
 
 
-# ==========================
 # DATABASE CONNECTION
-# ==========================
 def get_db():
     if "db" not in g:
         g.db = sqlite3.connect(app.config["DATABASE"])
@@ -80,9 +76,7 @@ with app.app_context():
     init_db()
 
 
-# ==========================
 # AUTH HELPERS
-# ==========================
 def login_user(user_id):
     session["user_id"] = user_id
 
@@ -93,9 +87,7 @@ def current_user():
     return session.get("user_id")
 
 
-# ==========================
 # PAGE ROUTES
-# ==========================
 @app.route("/")
 def landing():
     return render_template("landing.html")
@@ -175,9 +167,7 @@ def signout():
     return redirect(url_for("landing"))
 
 
-# ==========================
 # AUTH ROUTES
-# ==========================
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
     if request.method == "POST":
@@ -235,9 +225,7 @@ def signin():
     return render_template("signin.html")
 
 
-# ==========================
 # API ROUTES
-# ==========================
 @app.route("/api/moments")
 @login_required
 def api_moments():
@@ -302,8 +290,6 @@ def api_stats():
     })
 
 
-# ==========================
 # MAIN
-# ==========================
 if __name__ == "__main__":
     app.run(debug=True)

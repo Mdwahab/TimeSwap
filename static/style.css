@@ -1,6 +1,3 @@
-/* =========================================
-   RESET & GLOBAL
-========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -48,9 +45,7 @@ a {
     color: inherit;
 }
 
-/* =========================================
-   HEADER / NAV
-========================================= */
+/* HEADER / NAV */
 .header {
     width: 100%;
     padding: 16px 8%;
@@ -133,9 +128,7 @@ a {
     }
 }
 
-/* =========================================
-   BUTTONS
-========================================= */
+/* BUTTONS */
 
 .btn {
     background: linear-gradient(120deg, #ff4ecd, #6c5ce7, #00ffe7);
@@ -194,9 +187,7 @@ a {
     100% { background-position: 0% 50%; }
 }
 
-/* =========================================
-   LANDING PAGE
-========================================= */
+/* LANDING PAGE */
 .landing-section {
     height: calc(100vh - 80px);
     display: flex;
@@ -228,9 +219,7 @@ a {
     opacity: 0;
 }
 
-/* =========================================
-   EXCHANGE PAGE
-========================================= */
+/* EXCHANGE PAGE */
 .exchange-section {
     max-width: 1100px;
     margin: 60px auto;
@@ -374,9 +363,7 @@ a {
     background: rgba(17, 9, 48, 0.95);
 }
 
-/* =========================================
-   RESULT PAGE
-========================================= */
+/* RESULT PAGE */
 .result-section {
     max-width: 900px;
     margin: 60px auto;
@@ -466,9 +453,7 @@ a {
     text-align: center;
 }
 
-/* =========================================
-   GALLERY PAGE (premium masonry)
-========================================= */
+/* GALLERY PAGE (premium masonry) */
 .gallery-section {
     max-width: 1100px;
     margin: 60px auto;
@@ -510,9 +495,7 @@ a {
     overflow: hidden;
 }
 
-/* =========================================
-   STATS PAGE
-========================================= */
+/* STATS PAGE */
 .stats-section {
     max-width: 1100px;
     margin: 60px auto;
@@ -581,9 +564,7 @@ a {
     color: #ff4ecd;
 }
 
-/* =========================================
-   ANIMATIONS
-========================================= */
+/*  ANIMATIONS */
 @keyframes fadeUp {
     0% {
         opacity: 0;
@@ -595,9 +576,7 @@ a {
     }
 }
 
-/* =========================================
-   RESPONSIVE TWEAKS
-========================================= */
+/* RESPONSIVE TWEAKS */
 @media (max-width: 768px) {
     .landing-text h1 {
         font-size: 2.2rem;
